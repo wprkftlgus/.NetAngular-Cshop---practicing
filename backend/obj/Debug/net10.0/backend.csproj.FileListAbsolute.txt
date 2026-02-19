@@ -31,3 +31,7 @@ C:\Users\Sihyeon\Desktop\c.NetAngularPractice\backend\obj\Debug\net10.0\refint\b
 C:\Users\Sihyeon\Desktop\c.NetAngularPractice\backend\obj\Debug\net10.0\backend.pdb
 C:\Users\Sihyeon\Desktop\c.NetAngularPractice\backend\obj\Debug\net10.0\backend.genruntimeconfig.cache
 C:\Users\Sihyeon\Desktop\c.NetAngularPractice\backend\obj\Debug\net10.0\ref\backend.dll
+C:\Users\Sihyeon\Desktop\c.NetAngularPractice\backend\bin\Debug\net10.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\Sihyeon\Desktop\c.NetAngularPractice\backend\bin\Debug\net10.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\Sihyeon\Desktop\c.NetAngularPractice\backend\bin\Debug\net10.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\Sihyeon\Desktop\c.NetAngularPractice\backend\obj\Debug\net10.0\backend.sourcelink.json
