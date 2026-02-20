@@ -12,6 +12,9 @@ npm-debug.log
 yarn-error.log
 bin
 obj
+node_modules
+package
+package-lock
 
 # IDEs and editors
 .idea/
