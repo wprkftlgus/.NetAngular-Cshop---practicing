@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using backend.Data;
 using backend.Models;
+using backend.Dtos;
 
 namespace backend.Controllers;
 
@@ -16,19 +17,41 @@ public class UserController : ControllerBase
     }
 
     [HttpGet]
-    public IActionResult GetUsers()
+    public IActionResult getUsers()
     {
         return Ok(_context.Users.ToList());
     }
 
     [HttpPost]
-    public IActionResult CreateUser(User user)
-    {
-        user.CreatedAt = DateTime.Now;
+    public IActionResult addUser([FromBody] CreateUserDto dto)
+    {   
+        var user = new User
+        {
+            Name = dto.Name,
+            Email = dto.Email,
+            CreatedAt = DateTime.Now
+        };
 
         _context.Users.Add(user);
         _context.SaveChanges();
 
         return Ok(user);
+    }
+
+    [HttpDelete("{id}")]
+
+    public IActionResult deleteUser(int id)
+    {
+        var user = _context.Users.Find(id);
+
+        if(user == null)
+        {
+            return NotFound();
+        }
+
+        _context.Users.Remove(user);
+        _context.SaveChanges();
+
+        return NoContent();
     }
 }

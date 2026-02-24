@@ -1,0 +1,19 @@
+.top {
+  background: rgb(247, 247, 247);
+}
+.title {
+  font-weight: 600;
+  font-size: x-large;
+}
+.input {
+  border: black 1px solid;
+}
+.button {
+  cursor: pointer;
+  background-color: rgb(103, 192, 243);
+  border-radius: 6px;
+  padding: 8px;
+  &:hover {
+    background-color: rgb(123, 204, 250);
+  }
+}

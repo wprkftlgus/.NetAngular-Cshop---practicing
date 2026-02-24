@@ -1,0 +1,19 @@
+<div class="top">
+  <div>SihyeonHome</div>
+</div>
+<div class="middle">
+  <div class="title">Popular homes</div>
+<form (ngSubmit)="onSubmit()">
+  <input class="input" [(ngModel)]="user.name" type="text" name="name" placeholder="name" />
+  <input class="input" [(ngModel)]="user.email" type="email" name="email" placeholder="email" />
+  <button type="submit" class="button">Submit</button>
+</form>
+
+<div *ngFor="let u of users">
+<div>{{ u.name}}</div>
+<div>{{ u.email}}</div>
+<button type="button" (click)="deleteUser(u.id)">Delete</button>
+</div>
+
+</div>
+
