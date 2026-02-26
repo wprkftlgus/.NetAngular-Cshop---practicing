@@ -2,6 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 import { CommonModule } from '@angular/common';
 import {UserService , User } from "../../services/user.service";
+import { RouterModule } from '@angular/router';
 
 export interface CreateUser {
   name: string;
@@ -12,7 +13,7 @@ export interface CreateUser {
   selector: 'app-home',
   standalone: true,
   templateUrl: './home.component.html',
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, RouterModule],
   styleUrls: ['./home.component.scss']
 })
 

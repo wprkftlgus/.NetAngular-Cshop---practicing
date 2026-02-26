@@ -55,3 +55,24 @@ public class UserController : ControllerBase
         return NoContent();
     }
 }
+
+public class PostController : ControllerBase
+{
+    private readonly AppDbContext _context;
+
+    public PostController(AppDbContext context)
+    {
+        _context = context;
+    } 
+    [HttpGet]
+    public IActionResult getPosts()
+    {
+        return Ok(_context.Posts.ToList());
+    }
+
+    [HttpPost]
+    public IActionResult addPost()
+    {
+        
+    }
+}
