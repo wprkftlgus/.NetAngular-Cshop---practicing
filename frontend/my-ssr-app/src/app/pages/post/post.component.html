@@ -1,7 +1,11 @@
 <div>poopie</div>
 <div>asd</div>
-<form ngsubmit="onsubmit()">
-<input placeholder="Title" />
-<textarea placeholder="Content"></textarea>
-<button>Submit</button>
+<form (ngsubmit)="onSubmit()">
+<input name="title" placeholder="Title" />
+<textarea name="content" placeholder="Content"></textarea>
+<button type="submit">Submit</button>
 </form>
+<div *ngFor="let p of posts">
+<div>{{p.title}}</div>
+<div>{{p.content}}</div>
+</div>

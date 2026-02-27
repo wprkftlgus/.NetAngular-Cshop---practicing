@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using backend.Data;
 using backend.Models;
 using backend.Dtos;
+using Microsoft.AspNetCore.Components.Web;
 
 namespace backend.Controllers;
 
@@ -56,23 +57,3 @@ public class UserController : ControllerBase
     }
 }
 
-public class PostController : ControllerBase
-{
-    private readonly AppDbContext _context;
-
-    public PostController(AppDbContext context)
-    {
-        _context = context;
-    } 
-    [HttpGet]
-    public IActionResult getPosts()
-    {
-        return Ok(_context.Posts.ToList());
-    }
-
-    [HttpPost]
-    public IActionResult addPost()
-    {
-        
-    }
-}

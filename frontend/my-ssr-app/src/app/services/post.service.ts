@@ -1,7 +1,7 @@
 import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 import { Observable, retry } from "rxjs";
-import { CreateUser } from "../pages/home/home.component";
+import { CreatePost } from "../pages/post/post.component";
 
 export interface Post {
   id: number;
@@ -19,7 +19,7 @@ export class PostService {
 
   constructor(private http: HttpClient) {}
 
-  addPost(post: Post): Observable<Post> {
+  addPost(post: CreatePost): Observable<Post> {
     return this.http.post<Post>(this.apiurl, post);
   }
   getPost(): Observable<Post[]> {
